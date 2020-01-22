@@ -15,7 +15,7 @@ import io.netty.channel.ChannelPromise;
 public class ClientTransportHandler extends ChannelInboundHandlerAdapter {
 	private int index = 0;
 	//private String roomId = "roomId";
-	private String roomId = "22421,22422,22423,";
+	private String roomId = "22422,";
 	
 	public ClientTransportHandler(){ }
 	
