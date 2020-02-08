@@ -31,12 +31,12 @@ public class ServerRequestbRoom extends Packet {
 	@Override
 	public void execPacket() {
 		//System.out.println("SEND ServerRequestbRoom " + this.getFromUserId() + "[" + this.getOption(1) + "]");
-		this.setFromUserId("T366");
-		this.setRoomId("22422,");
+		this.setFromUserId("T377");
+		this.setRoomId("22421,22422,");
 		this.setTransactionId(15724);
 		this.setStatus(0);
 		TreeMap<Integer,Object> treeMap = new TreeMap<>();
-		treeMap.put(1, "{'command':'open','content':'我是教师T366，我在ServerRequestbRoom','domain':'i-clicker','domain_id':37}");
+		treeMap.put(1, "{'command':'open','content':'我是教师T377，我在ServerRequestbRoom','domain':'i-clicker','domain_id':37}");
 		this.setOptions(treeMap);
 		ServerManager.INSTANCE.sendServerRequest(this);
 	}
