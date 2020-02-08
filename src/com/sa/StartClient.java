@@ -237,7 +237,7 @@ public class StartClient {
 			serverRequestcApplyAuth.setFromUserId("T377");
 			serverRequestcApplyAuth.setRoomId("22421,22422,");
 			serverRequestcApplyAuth.setTransactionId(15724);
-			serverRequestcApplyAuth.setToUserId("147081");
+			serverRequestcApplyAuth.setToUserId("147080");
 			serverRequestcApplyAuth.setStatus(0);
 			TreeMap<Integer,Object> applyAuthMap = new TreeMap<>();
 			applyAuthMap.put(1, "呃。。申请权限");
@@ -249,6 +249,7 @@ public class StartClient {
 			ServerRequestcAgreeApplyAuth serverRequestcAgreeApplyAuth = new ServerRequestcAgreeApplyAuth();
 			serverRequestcAgreeApplyAuth.setFromUserId("T377");
 			serverRequestcAgreeApplyAuth.setRoomId("22421,22422,");
+			serverRequestcAgreeApplyAuth.setToUserId("147080");
 			serverRequestcAgreeApplyAuth.setTransactionId(15724);
 			serverRequestcAgreeApplyAuth.setStatus(0);
 			TreeMap<Integer,Object> agreeApplyAuthMap = new TreeMap<>();
@@ -292,7 +293,7 @@ public class StartClient {
 			serverRequestbShareUpd3.setStatus(0);
 			TreeMap<Integer,Object> updateShareMap3 = new TreeMap<>();
 			updateShareMap3.put(1, "starlist");
-			updateShareMap3.put(2, "{'20147081':8}##{'20147081':9}##{'20147081':80}##");
+			updateShareMap3.put(2, "{'20147082':82}##{'20147081':9}##{'20147081':80}##");
 			updateShareMap3.put(3, "n");
 			updateShareMap3.put(4, "upd");
 			serverRequestbShareUpd3.setOptions(updateShareMap3);
@@ -366,7 +367,7 @@ public class StartClient {
 			serverRequestbShareUpd2.setStatus(0);
 			TreeMap<Integer,Object> updateShareMap2 = new TreeMap<>();
 			updateShareMap2.put(1, "starlist");
-			updateShareMap2.put(8, "{'20147081':8}");
+			updateShareMap2.put(8, "{'20147082':82}");
 			updateShareMap2.put(3, "n");
 			updateShareMap2.put(4, "upd.value");
 			updateShareMap2.put(2, "shareUpdValue");
@@ -397,7 +398,7 @@ public class StartClient {
 			serverRequestbShareUpdSelf3.setStatus(0);
 			TreeMap<Integer,Object> updateShareSelf3 = new TreeMap<>();
 			updateShareSelf3.put(1, "starlist");
-			updateShareSelf3.put(2, "{'20147081':8}");
+			updateShareSelf3.put(2, "{'20147082':82}");
 			updateShareSelf3.put(3, "n");
 			updateShareSelf3.put(4, "upd");
 			serverRequestbShareUpdSelf3.setOptions(updateShareSelf3);
@@ -429,7 +430,7 @@ public class StartClient {
 			serverRequestbShareUpdSelf1.setStatus(0);
 			TreeMap<Integer,Object> updateShareMapSelf1 = new TreeMap<>();
 			updateShareMapSelf1.put(1, "starlist");
-			updateShareMapSelf1.put(8, "{'20147081':8}");
+			updateShareMapSelf1.put(8, "{'20147082':82}");
 			updateShareMapSelf1.put(3, "n");
 			updateShareMapSelf1.put(4, "upd.value");
 			updateShareMapSelf1.put(2, "shareUpdSelfValue");
