@@ -13,24 +13,25 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.ChannelPromise;
 
 public class ClientTransportHandler extends ChannelInboundHandlerAdapter {
-	private int index = 0;
-	//private String roomId = "roomId";
-	private String roomId = "22421,22422,";
+	private String roomId = "roomId";
+	private String userId="-1";
+	//private String roomId = "22421,22422,";
 	
 	public ClientTransportHandler(){ }
 	
-	public ClientTransportHandler(String roomId, int index){
-		this.index = index;
+	public ClientTransportHandler(String roomId, String userId){
 		this.roomId = roomId;
+		this.userId = userId;
 	}
 
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) {
-		Integer transactionId = (int) (1 + Math.random()*100000000);
+		//Integer transactionId = (int) (1 + Math.random()*100000000);
 		//String fromUserId = roomId + "-" + index + "-" + System.currentTimeMillis() + "-" + transactionId;
-		String fromUserId = "T377";
+		//String fromUserId = "T377";
+		String fromUserId = userId;
 
-		ServerLogin serverLogin = new ServerLogin(transactionId, roomId, fromUserId, "", 0);
+		ServerLogin serverLogin = new ServerLogin(999, roomId, fromUserId, "", 0);
 		TreeMap<Integer, Object> options = new TreeMap<>(); // 消息记录集
 		options.put(1, fromUserId);
 		//options.put(2, "PARENT_TEACHER");
