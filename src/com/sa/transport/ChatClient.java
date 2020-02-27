@@ -9,7 +9,13 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.LengthFieldPrepender;
+import io.netty.handler.logging.LogLevel;
+import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.timeout.IdleStateHandler;
+import io.netty.util.ResourceLeak;
+import io.netty.util.ResourceLeakDetector;
+import io.netty.util.ResourceLeakDetector.Level;
+import jdk.management.resource.ResourceAccuracy;
 
 import java.net.InetSocketAddress;
 
@@ -59,12 +65,14 @@ public class ChatClient implements Runnable {
                     pipeline.addLast(new HeartBeatHandler());
                     pipeline.addLast(new ClientTransportHandler(roomId,userid));  
                 }  
-                  
             });  
+            //b.handler(new LoggingHandler(LogLevel.DEBUG));
+            
               
 //            ChannelFuture f = b.connect(new InetSocketAddress(host, port),  
 //                    new InetSocketAddress(ClientConfigs.LOCAL_SERVER_IP, ClientConfigs.LOCAL_SERVER_PORT))  
 //                    .sync();
+            //ResourceLeakDetector.setLevel(ResourceLeakDetector.Level.ADVANCED);
             ChannelFuture f = b.connect(new InetSocketAddress(host, port)).sync();
 
             f.channel().closeFuture().sync();  
