@@ -32,7 +32,7 @@ import com.sa.service.server.ServerRequestcRoomRemove;
 import com.sa.service.server.ServerRequestcShareRemove;
 import com.sa.transport.ChatClient;
 import com.sa.transport.ClientConfigs;
-public class StartClient {
+/*public class StartClient {
 	private static int count = 50;
 	private static List<String> roomIds = Arrays.asList(
 			"房间50","房间51","房间52","房间53","房间54","房间55","房间56","房间57","房间58","房间59",
@@ -72,12 +72,12 @@ public class StartClient {
 		scan.close();
 	}
 
-	/*private static void functionProcessing(String menu, Scanner scan) {
+	private static void functionProcessing(String menu, Scanner scan) {
 		switch (menu) {
 		
 		case "1"://登录
 			try {
-				Thread.sleep(81000);
+				Thread.sleep(32000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -88,105 +88,7 @@ public class StartClient {
 			break;
 		case "10": // 更新共享
 			try {
-				Thread.sleep(81000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			for (Entry<String, String> str : map.entrySet()) {
-				
-				ServerRequestbShareUpd serverRequestbShareUpd = new ServerRequestbShareUpd();
-				serverRequestbShareUpd.setFromUserId(str.getValue());
-				serverRequestbShareUpd.setRoomId(str.getKey());
-				serverRequestbShareUpd.setTransactionId(15724);
-				serverRequestbShareUpd.setStatus(0);
-				TreeMap<Integer,Object> updateShareMap = new TreeMap<>();
-				updateShareMap.put(1, "starcount");
-				updateShareMap.put(2, str.getValue()+"{'20147076':'1','20147078':'0','20147079':'0','20147080':'80','20147081':'81','20147082':'82'}");
-				updateShareMap.put(3, "1");
-				updateShareMap.put(4, "upd");
-				serverRequestbShareUpd.setOptions(updateShareMap);
-				serverRequestbShareUpd.execPacket();
-			}
-			
-			break;	
-		default:
-			System.err.println("无此功能");
-			break;
-
-		}
-	}*/
-	private static boolean com1(){
-		 //获取当前时间
-     LocalDateTime nowTime= LocalDateTime.now();
-     //自定义时间
-     LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 17, 30, 00);
-     //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
-		return nowTime.equals(endTime);
-	}
-	private static boolean com2(){
-		 //获取当前时间
-    LocalDateTime nowTime= LocalDateTime.now();
-    //自定义时间
-    LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 17, 40, 00);
-    //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
-		return nowTime.equals(endTime);
-	}
-	
-	private static boolean com3(){
-		 //获取当前时间
-   LocalDateTime nowTime= LocalDateTime.now();
-   //自定义时间
-   LocalDateTime endTime = LocalDateTime.of(2020, 02, 27, 17, 50, 00);
-   //比较   现在的时间 和 设定的时候  相等  返回类型是Boolean类型
-		return nowTime.equals(endTime);
-	}
-	private static void functionProcessing(String menu, Scanner scan) {
-		switch (menu) {
-		
-		case "1"://登录
-			/*try {
-				Thread.sleep(89000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}*/
-			while(true){
-				
-				if(com1()){
-					for (Entry<String, String> str : map.entrySet()) {
-						new Thread(new ChatClient(ClientConfigs.REMOTE_SERVER_IP, ClientConfigs.REMOTE_SERVER_PORT, str.getKey(),str.getValue())).start();
-						//new EnThread().start();
-					}
-				}
-				if(com2()){
-					for (Entry<String, String> str : map.entrySet()) {
-						
-						ServerRequestbShareUpd serverRequestbShareUpd = new ServerRequestbShareUpd();
-						serverRequestbShareUpd.setFromUserId(str.getValue());
-						serverRequestbShareUpd.setRoomId(str.getKey());
-						serverRequestbShareUpd.setTransactionId(15724);
-						serverRequestbShareUpd.setStatus(0);
-						TreeMap<Integer,Object> updateShareMap = new TreeMap<>();
-						updateShareMap.put(1, "starcount");
-						updateShareMap.put(2, str.getValue()+"{'20147076':'1','20147078':'0','20147079':'0','20147080':'80','20147081':'81','20147082':'82'}");
-						updateShareMap.put(3, "1");
-						updateShareMap.put(4, "upd");
-						serverRequestbShareUpd.setOptions(updateShareMap);
-						serverRequestbShareUpd.execPacket();
-					}
-				}
-				if(com3()){
-					for (Entry<String, String> str : map.entrySet()) {
-						new Thread(new ChatClient(ClientConfigs.REMOTE_SERVER_IP, ClientConfigs.REMOTE_SERVER_PORT, str.getKey(),str.getValue())).start();
-						//new EnThread().start();
-					}
-				}
-			}
-			//break;
-		case "10": // 更新共享
-			try {
-				Thread.sleep(89000);
+				Thread.sleep(32000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -228,9 +130,9 @@ public class StartClient {
 
 		//System.exit(0);
 	}
-}
+}*/
 
-/*public class StartClient {
+public class StartClient {
 	private static int count = 1;
 	private static List<String> roomIds = Arrays.asList("房间A", "房间B", "房间C"
 			,"房间D", "房间E", "房间F"
@@ -274,13 +176,13 @@ public class StartClient {
 			"0.退出测试;"
 	);
 
-	public static void startChatClient() {
+	/*public static void startChatClient() {
 		for (int i=0; i<count; i++) {
 			String roomId = roomIds.get(i%roomIds.size());
 
 			new Thread(new ChatClient(ClientConfigs.REMOTE_SERVER_IP, ClientConfigs.REMOTE_SERVER_PORT, roomId, i+1)).start();
 		}
-	}
+	}*/
 
 	public static void menu() throws Exception {
 		Scanner scan = new Scanner(System.in);
@@ -670,7 +572,7 @@ public class StartClient {
 		}
 	}
 
-	*//** CASE 3 一对多【全房间】*//*
+	/** CASE 3 一对多【全房间】*/
 	private static void serverRequestbRoom(Scanner scanner) {
 		System.out.println("请输入消息 : ");
 		String content = scanner.nextLine();
@@ -691,4 +593,4 @@ public class StartClient {
 
 		System.exit(0);
 	}
-}*/
+}
